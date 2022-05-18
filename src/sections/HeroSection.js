@@ -59,7 +59,7 @@ const mock_data = {
 export default function HeroSection(props) {
     return (
         <div className="bg-hero-img bg-cover bg-top bg-no-repeat p-2 min-h-screen bg-fixed font-press-start">
-            <div className="text-left text-6xl p-4 m-5 py-8 max-w-5xl text-white">
+            <div className="text-left text-6xl p-4 m-5 py-8 text-white">
 
                 <p>{props.main}</p>
                 <StackedButton text={props.button_text} onClick='' />
@@ -67,38 +67,7 @@ export default function HeroSection(props) {
                     Yield producing mock-options Strategies, easy deposits of cUsd and Celo
                 </p>
             </div>
-            <div className="flex flex-row justify-center items-center ">
-            {mock_data.mock_options.map((option,index)=>{
-                return (
-                    <div className="bg-opacity-80 bg-white p-4 m-4 w-30 h-30 rounded-lg">
-                        <div className={`text-${option.color} text-2xl text-center`}>
-                            {option.title}
-                        </div>
-                        <div className="text-white text-center">
-                            {/* {option.lev_desciption} */}
-                        </div>
-                        <div className="flex flex-row justify-center items-center">
-
-                        {option.historical_return_rates.map((rate,index)=>{
-                            return (
-                                <div className="text-white w-15 p-2 m-2 text-xs text-pink text-center rounded-lg bg-blac bg-opacity-100">
-                                    {rate.t} {rate.return}
-                                </div>
-                            )
-                        }
-                        )}
-                        </div>
-                        <button className={`w-15 p-2 text-white bg-${option.color} bg-opacity-100 rounded-lg`}>
-                                {option.leverage}x
-                        </button>
-                    </div>
-            
-                )
-            })}
-        </div>
-            <div className="bg-opacity-70 bg-white">
-                    
-            </div>
+           
         </div>
     );
 }

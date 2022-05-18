@@ -6,7 +6,7 @@ import BubbleSection from "./sections/BubbleSection";
 function App() {
   // HOME PAGE
   return (
-    <div className="p-5">
+    <div className="">
       {/* <BubbleSection pool_data= {pool_data.bubble_data}/> */}
       <PoolPage/>
     </div>
