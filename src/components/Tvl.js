@@ -19,18 +19,19 @@ export default function Tvl(props) {
                 <div className="text-4xl pb-4">
                     <p>TVL: {format_tvl(props.stats.tvl_usd)}</p>
                 </div>
-                <p className="text-2xl">24h vol. {format_tvl(props.stats.vol_24h)}</p>
+                
+                <p className="text-2xl">past 24h {format_tvl(props.stats.past_24h)}</p>
                 
                 <p> Total Interest Earned : ${props.stats.total_interest}</p>
                 </div>
                 <div className="grid grid-cols-2 content-center">
                     <div className="p-2">
                     <CurrentPool {...props.current_pool}/>
-                    <RecentPools previous_pools={props.previous_pools}/>
+                    {/* <RecentPools previous_pools={props.previous_pools}/> */}
                     </div>
-                    <div className="p-2">
+                    {/* <div className="p-2"> */}
                     <UserPositions {...props.user}/>
-                    </div>
+                    {/* </div> */}
                 </div>
 
         </StackedWrapper>

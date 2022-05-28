@@ -4,10 +4,21 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import {useState} from 'react';
+import { ApolloClient, InMemoryCache,ApolloProvider } from '@apollo/client'
+
+const APIURL = 'https://api.studio.thegraph.com/query//<SUBGRAPH_NAME>/'
+
+const UNIV3_SUBGRAPH = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
+
+
+const client = new ApolloClient({
+  uri: UNIV3_SUBGRAPH,
+  cache: new InMemoryCache(),
+})
 
 export default function Wrapper(){
     return(
-
+  <ApolloProvider client={client}>
         <div className='' > 
         <Navbar />
         <BrowserRouter>
@@ -21,7 +32,7 @@ export default function Wrapper(){
       </BrowserRouter>
       </div>
 
-
+  </ApolloProvider>
 
 
     );

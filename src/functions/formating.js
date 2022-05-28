@@ -14,6 +14,4 @@ function format_apy(apy){
         return '-';
     }
     return apy.toFixed(2)*100 + "%";
-
-
 }

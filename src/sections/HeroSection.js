@@ -1,60 +1,6 @@
 import React from 'react';
 import StackedButton from '../components/StackedButton';
-const mock_data = {
-    mock_options : [
-        {
-            title:'CELO-3X-LONG',
-            color:'green',
-            historical_return_rates: [
-                {t:'1h',return:'+0.00%'},
-                {t:'12h',return:'+0.00%'},
-                {t:'1d',return:'+0.00%'},
-                {t:'7d',return:'+0.00%'},
-                {t:'30d',return:'+0.00%'},
-            ],
-            assumptions: [
-                "Celo go up"
-            ],
-            leverage: 3.0,
-            lev_desciption: "exposed to the price fluctuations of the underlying asset 3x",
 
-        },
-        {
-            title:'CELO-3X-SHORT',
-            color: 'blue',
-            historical_return_rates: [
-                {t:'1h',return:'+0.00%'},
-                {t:'12h',return:'+0.00%'},
-                {t:'1d',return:'+0.00%'},
-                {t:'7d',return:'+0.00%'},
-                {t:'30d',return:'+0.00%'},
-            ],
-            assumptions: [
-                "Celo drill"
-            ],
-            leverage: 3.0,
-            lev_desciption: "exposed to the price fluctuations of the underlying asset 3x",
-
-        },
-        {
-            title:'MOBI/UBE-3X-LONG',
-            color: 'pink',
-            historical_return_rates: [
-                {t:'1h',return:'+0.00%'},
-                {t:'12h',return:'+0.00%'},
-                {t:'1d',return:'+0.00%'},
-                {t:'7d',return:'+0.00%'},
-                {t:'30d',return:'+0.00%'},
-            ],
-            assumptions: [
-                "Mobie UBE go up"
-            ],
-            leverage: 3.0,
-            lev_desciption: "exposed to the price fluctuations of the underlying asset 3x",
-
-        }
-    ]
-    }
 
 export default function HeroSection(props) {
     return (
